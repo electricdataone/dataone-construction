@@ -182,28 +182,58 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      <section className="bg-gray-950 py-16 sm:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 sm:mb-14">
             How We Got Here
           </h2>
-          <div className="space-y-6 sm:space-y-8">
+
+          {/* Horizontal timeline — desktop */}
+          <div className="hidden md:block">
+            <div className="relative">
+              {/* Connecting line */}
+              <div className="absolute top-6 left-0 right-0 h-px bg-brand/30" />
+              <div className="grid grid-cols-6 gap-4">
+                {[
+                  { year: "1972", event: "Electrical division founded in Franklinville, NJ" },
+                  { year: "2004", event: "BSO founded — parent infrastructure company behind Data One" },
+                  { year: "2017", event: "Nationwide expansion across 25 states" },
+                  { year: "2024", event: "Data One launches as Europe's first giga-scale AI data center platform" },
+                  { year: "2025", event: "Phase 1 of Vineland 300 MW data center delivered in 20 weeks" },
+                  { year: "2026", event: "DataOne Construction formed as self-contained electrical division" },
+                ].map((item, i) => (
+                  <div key={i} className="relative pt-10">
+                    {/* Dot on the line */}
+                    <div className="absolute top-[18px] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-brand border-4 border-gray-950" />
+                    <div className="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-brand/40 transition-colors">
+                      <p className="text-brand font-bold text-2xl mb-2">{item.year}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed">{item.event}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Vertical timeline — mobile */}
+          <div className="md:hidden space-y-4">
             {[
-              { year: "1972", event: "DataOne Construction's electrical division founded in Franklinville, NJ" },
-              { year: "2004", event: "BSO founded — the parent infrastructure company behind Data One" },
-              { year: "2017", event: "Electrical division expands to nationwide operations across 25 states" },
+              { year: "1972", event: "Electrical division founded in Franklinville, NJ" },
+              { year: "2004", event: "BSO founded — parent infrastructure company behind Data One" },
+              { year: "2017", event: "Nationwide expansion across 25 states" },
               { year: "2024", event: "Data One launches as Europe's first giga-scale AI data center platform" },
-              { year: "2025", event: "DataOne Construction delivers Phase 1 of the Vineland 300 MW data center in 20 weeks" },
-              { year: "2026", event: "DataOne Construction formed — the self-contained electrical construction division" },
+              { year: "2025", event: "Phase 1 of Vineland 300 MW data center delivered in 20 weeks" },
+              { year: "2026", event: "DataOne Construction formed as self-contained electrical division" },
             ].map((item, i) => (
-              <div key={i} className="flex gap-4 sm:gap-6 items-start">
-                <div className="flex-shrink-0 w-14 sm:w-20 text-right">
-                  <span className="text-brand font-bold text-base sm:text-lg">{item.year}</span>
+              <div key={i} className="flex gap-4 items-start">
+                <div className="flex-shrink-0 relative">
+                  <div className="w-3 h-3 rounded-full bg-brand mt-1" />
+                  {i < 5 && <div className="absolute top-4 left-1.5 w-px h-full bg-brand/20" />}
                 </div>
-                <div className="flex-shrink-0 w-px bg-brand-muted relative">
-                  <div className="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-brand" />
+                <div className="bg-gray-900 rounded-lg p-4 border border-gray-800 flex-1 mb-2">
+                  <p className="text-brand font-bold text-lg">{item.year}</p>
+                  <p className="text-gray-400 text-xs leading-relaxed mt-1">{item.event}</p>
                 </div>
-                <p className="text-gray-600 pb-4 text-sm sm:text-base">{item.event}</p>
               </div>
             ))}
           </div>
