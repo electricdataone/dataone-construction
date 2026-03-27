@@ -50,15 +50,15 @@ export default function Careers() {
     <>
       {/* Hero */}
       <section className="bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <p className="text-brand font-medium tracking-wider uppercase text-sm mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+          <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">
             Careers
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold max-w-3xl text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold max-w-3xl text-balance">
             Build the Future of{" "}
             <span className="text-brand">AI Infrastructure</span>
           </h1>
-          <p className="mt-6 text-gray-300 text-lg max-w-2xl leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed">
             Join the team building the electrical backbone of the world&apos;s
             largest AI data centers. We&apos;re hiring across trades and
             experience levels.
@@ -67,8 +67,8 @@ export default function Careers() {
       </section>
 
       {/* Why Work Here */}
-      <section className="bg-brand-cyan py-16">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
+      <section className="bg-brand-cyan py-10 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
           {[
             { value: "1,200+", label: "Team Members" },
             { value: "50+", label: "Years in Business" },
@@ -76,19 +76,19 @@ export default function Careers() {
             { value: "25", label: "States Licensed" },
           ].map((stat) => (
             <div key={stat.label}>
-              <p className="text-3xl font-bold text-brand">{stat.value}</p>
-              <p className="text-sm text-gray-600 mt-1">{stat.label}</p>
+              <p className="text-2xl sm:text-3xl font-bold text-brand">{stat.value}</p>
+              <p className="text-xs sm:text-sm text-gray-600 mt-1">{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Open Positions */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
           Open Positions
         </h2>
-        <p className="text-gray-600 mb-12">
+        <p className="text-gray-600 mb-8 sm:mb-12 text-sm sm:text-base">
           Currently hiring for the Vineland 300 MW data center campus and
           headquarters operations.
         </p>
@@ -96,26 +96,26 @@ export default function Careers() {
           {openings.map((job) => (
             <div
               key={job.title}
-              className="bg-white border border-brand-muted/30 rounded-xl p-8 hover:shadow-md transition-shadow"
+              className="bg-white border border-brand-muted/30 rounded-xl p-5 sm:p-8 hover:shadow-md transition-shadow"
             >
-              <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900">
                     {job.title}
                   </h3>
-                  <div className="flex items-center gap-4 mt-2">
-                    <span className="text-sm text-gray-500">{job.location}</span>
-                    <span className="text-sm text-brand font-medium">
+                  <div className="flex items-center gap-3 sm:gap-4 mt-1.5 sm:mt-2">
+                    <span className="text-xs sm:text-sm text-gray-500">{job.location}</span>
+                    <span className="text-xs sm:text-sm text-brand font-medium">
                       {job.type}
                     </span>
                   </div>
-                  <p className="mt-3 text-gray-600 text-sm leading-relaxed max-w-2xl">
+                  <p className="mt-2 sm:mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed max-w-2xl">
                     {job.description}
                   </p>
                 </div>
                 <Link
                   href="/contact"
-                  className="flex-shrink-0 bg-brand hover:bg-brand-light text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors"
+                  className="self-start flex-shrink-0 bg-brand hover:bg-brand-light text-white text-xs sm:text-sm font-semibold px-5 sm:px-6 py-2 sm:py-2.5 rounded-lg transition-colors"
                 >
                   Apply
                 </Link>
@@ -126,12 +126,12 @@ export default function Careers() {
       </section>
 
       {/* Benefits */}
-      <section className="bg-gray-50 py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">
+      <section className="bg-gray-50 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12">
             Why DataOne Construction
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 title: "Cutting-Edge Projects",
@@ -166,10 +166,10 @@ export default function Careers() {
             ].map((benefit) => (
               <div
                 key={benefit.title}
-                className="bg-white rounded-xl p-8 border border-brand-muted/30"
+                className="bg-white rounded-xl p-6 sm:p-8 border border-brand-muted/30"
               >
-                <h3 className="font-bold text-gray-900">{benefit.title}</h3>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                <h3 className="font-bold text-gray-900 text-sm sm:text-base">{benefit.title}</h3>
+                <p className="mt-2 sm:mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

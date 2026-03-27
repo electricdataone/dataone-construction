@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "./components/MobileNav";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -9,6 +10,11 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "DataOne Construction",
@@ -36,18 +42,18 @@ export default function RootLayout({
       <body className={`${geistSans.variable} font-sans antialiased`}>
         {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-brand-muted/30">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center">
               <Image
                 src="/logo.jpg"
                 alt="DataOne Construction"
                 width={160}
                 height={48}
-                className="h-10 w-auto"
+                className="h-8 sm:h-10 w-auto"
                 priority
               />
             </Link>
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -58,23 +64,24 @@ export default function RootLayout({
                 </Link>
               ))}
             </div>
+            <MobileNav />
           </div>
         </nav>
 
         {/* Page Content */}
-        <main>{children}</main>
+        <main className="overflow-x-hidden">{children}</main>
 
         {/* Footer */}
         <footer className="bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-6 py-16">
-            <div className="grid md:grid-cols-4 gap-12">
-              <div className="md:col-span-2">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
+              <div className="sm:col-span-2">
                 <Image
                   src="/logo.jpg"
                   alt="DataOne Construction"
                   width={160}
                   height={48}
-                  className="h-10 w-auto brightness-0 invert mb-4"
+                  className="h-8 sm:h-10 w-auto brightness-0 invert mb-4"
                 />
                 <p className="text-gray-400 text-sm leading-relaxed max-w-md">
                   Powering the infrastructure behind the world&apos;s largest AI
@@ -116,7 +123,7 @@ export default function RootLayout({
                 </p>
               </div>
             </div>
-            <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+            <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-8 text-center text-xs sm:text-sm text-gray-500">
               &copy; {new Date().getFullYear()} DataOne Construction. All rights
               reserved.
             </div>

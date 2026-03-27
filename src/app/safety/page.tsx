@@ -3,15 +3,15 @@ export default function Safety() {
     <>
       {/* Hero */}
       <section className="bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <p className="text-brand font-medium tracking-wider uppercase text-sm mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+          <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">
             Safety
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold max-w-3xl text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold max-w-3xl text-balance">
             Safety Is Not a Priority.{" "}
             <span className="text-brand">It&apos;s a Value.</span>
           </h1>
-          <p className="mt-6 text-gray-300 text-lg max-w-2xl leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed">
             Priorities change. Values don&apos;t. At DataOne Construction,
             safety is embedded in every process, every plan, and every person on
             the job site.
@@ -21,8 +21,8 @@ export default function Safety() {
 
       {/* Safety Metrics */}
       <section className="bg-brand-cyan">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-center">
             {[
               {
                 value: "0.600",
@@ -40,44 +40,44 @@ export default function Safety() {
                 detail: "Days Away, Restricted or Transferred",
               },
             ].map((metric) => (
-              <div key={metric.label} className="bg-white rounded-xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-brand">
+              <div key={metric.label} className="bg-white rounded-xl p-6 sm:p-8">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand">
                   {metric.value}
                 </p>
-                <p className="text-lg font-bold text-gray-900 mt-2">
+                <p className="text-base sm:text-lg font-bold text-gray-900 mt-2">
                   {metric.label}
                 </p>
-                <p className="text-sm text-gray-500 mt-1">{metric.detail}</p>
+                <p className="text-xs sm:text-sm text-gray-500 mt-1">{metric.detail}</p>
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-gray-500 mt-6">
+          <p className="text-center text-xs sm:text-sm text-gray-500 mt-4 sm:mt-6">
             2024 Safety Performance Metrics
           </p>
         </div>
       </section>
 
       {/* Safety Culture */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid md:grid-cols-2 gap-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Our Safety Culture
             </h2>
-            <p className="mt-6 text-gray-600 leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base">
               DataOne Construction inherits Byers Industrial Services&apos;
               deeply ingrained safety-first culture. Every employee — from first-day
               apprentice to senior project manager — has stop-work authority.
               No schedule, no budget, no deadline overrides safety.
             </p>
-            <p className="mt-4 text-gray-600 leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-gray-600 leading-relaxed text-sm sm:text-base">
               We front-load risk: detailed work plans, lift and rigging
               strategies, and hazard assessments are completed before a single
               tool is picked up. Daily toolbox talks and near-miss reporting keep
               awareness sharp throughout every shift.
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {[
               {
                 title: "Stop-Work Authority",
@@ -102,10 +102,10 @@ export default function Safety() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-gray-50 rounded-xl p-6 border border-brand-muted/20"
+                className="bg-gray-50 rounded-xl p-4 sm:p-6 border border-brand-muted/20"
               >
-                <h3 className="font-bold text-gray-900">{item.title}</h3>
-                <p className="mt-2 text-gray-600 text-sm leading-relaxed">
+                <h3 className="font-bold text-gray-900 text-sm sm:text-base">{item.title}</h3>
+                <p className="mt-1.5 sm:mt-2 text-gray-600 text-xs sm:text-sm leading-relaxed">
                   {item.detail}
                 </p>
               </div>
@@ -115,12 +115,12 @@ export default function Safety() {
       </section>
 
       {/* Certifications */}
-      <section className="bg-gray-50 py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">
+      <section className="bg-gray-50 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12">
             Certifications & Training
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {[
               "OSHA 10 & OSHA 30",
               "NFPA-70E (Arc Flash)",
@@ -141,9 +141,9 @@ export default function Safety() {
             ].map((cert) => (
               <div
                 key={cert}
-                className="bg-white rounded-lg p-4 border border-brand-muted/30 text-center"
+                className="bg-white rounded-lg p-3 sm:p-4 border border-brand-muted/30 text-center"
               >
-                <p className="text-sm font-medium text-gray-700">{cert}</p>
+                <p className="text-xs sm:text-sm font-medium text-gray-700">{cert}</p>
               </div>
             ))}
           </div>
@@ -151,11 +151,11 @@ export default function Safety() {
       </section>
 
       {/* Data Center Safety */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
           Data Center-Specific Safety
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {[
             {
               title: "High Voltage Protocols",
@@ -175,10 +175,10 @@ export default function Safety() {
           ].map((card) => (
             <div
               key={card.title}
-              className="bg-brand-cyan rounded-xl p-8"
+              className="bg-brand-cyan rounded-xl p-6 sm:p-8"
             >
-              <h3 className="font-bold text-gray-900">{card.title}</h3>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+              <h3 className="font-bold text-gray-900 text-sm sm:text-base">{card.title}</h3>
+              <p className="mt-2 sm:mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed">
                 {card.description}
               </p>
             </div>

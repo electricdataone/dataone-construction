@@ -74,15 +74,15 @@ export default function Capabilities() {
     <>
       {/* Hero */}
       <section className="bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <p className="text-brand font-medium tracking-wider uppercase text-sm mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+          <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">
             Capabilities
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold max-w-3xl text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold max-w-3xl text-balance">
             Electrical Construction for{" "}
             <span className="text-brand">Giga-Scale Data Centers</span>
           </h1>
-          <p className="mt-6 text-gray-300 text-lg max-w-2xl leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed">
             From high voltage installation to fiber infrastructure — every
             capability tuned for the unique demands of AI-ready data center
             construction.
@@ -91,25 +91,25 @@ export default function Capabilities() {
       </section>
 
       {/* Capabilities Grid */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid md:grid-cols-2 gap-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
           {capabilities.map((cap) => (
             <div
               key={cap.title}
-              className="bg-white border border-brand-muted/30 rounded-xl p-8 hover:shadow-lg transition-shadow"
+              className="bg-white border border-brand-muted/30 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow"
             >
-              <div className="w-12 h-12 rounded-lg bg-brand-cyan flex items-center justify-center mb-6">
-                <div className="w-5 h-5 rounded-sm bg-brand" />
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-lg bg-brand-cyan flex items-center justify-center mb-4 sm:mb-6">
+                <div className="w-4 sm:w-5 h-4 sm:h-5 rounded-sm bg-brand" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">{cap.title}</h3>
-              <p className="mt-3 text-gray-600 leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900">{cap.title}</h3>
+              <p className="mt-2 sm:mt-3 text-gray-600 leading-relaxed text-sm sm:text-base">
                 {cap.description}
               </p>
-              <ul className="mt-6 grid grid-cols-2 gap-2">
+              <ul className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {cap.specs.map((spec) => (
                   <li
                     key={spec}
-                    className="text-sm text-gray-500 flex items-start gap-2"
+                    className="text-xs sm:text-sm text-gray-500 flex items-start gap-2"
                   >
                     <span className="text-brand mt-0.5">&#9679;</span>
                     {spec}
@@ -122,18 +122,18 @@ export default function Capabilities() {
       </section>
 
       {/* Licensing */}
-      <section className="bg-brand-cyan py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">
+      <section className="bg-brand-cyan py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Licensed Nationwide
             </h2>
-            <p className="mt-4 text-gray-600 max-w-xl mx-auto">
+            <p className="mt-3 sm:mt-4 text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
               12 Master Electrician credentials and 35 contractor licenses
               across 25 states — ready to mobilize wherever your project demands.
             </p>
           </div>
-          <div className="grid grid-cols-5 md:grid-cols-9 gap-3 max-w-3xl mx-auto">
+          <div className="grid grid-cols-5 sm:grid-cols-7 md:grid-cols-9 gap-2 sm:gap-3 max-w-3xl mx-auto">
             {[
               "NJ", "DE", "PA", "NY", "NC", "VA", "WV", "MD", "FL",
               "GA", "AL", "SC", "TX", "LA", "MS", "MO", "KY", "IN",
@@ -141,7 +141,7 @@ export default function Capabilities() {
             ].map((state) => (
               <div
                 key={state}
-                className="bg-white rounded-lg py-2 text-center text-sm font-semibold text-brand border border-brand-muted/40"
+                className="bg-white rounded-lg py-1.5 sm:py-2 text-center text-xs sm:text-sm font-semibold text-brand border border-brand-muted/40"
               >
                 {state}
               </div>
@@ -151,17 +151,17 @@ export default function Capabilities() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
           Need a Capability Assessment?
         </h2>
-        <p className="mt-4 text-gray-600 max-w-xl mx-auto">
+        <p className="mt-3 sm:mt-4 text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
           Let&apos;s discuss your data center project scope and how DataOne
           Construction can deliver.
         </p>
         <Link
           href="/contact"
-          className="inline-block mt-8 bg-brand hover:bg-brand-light text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+          className="inline-block mt-6 sm:mt-8 bg-brand hover:bg-brand-light text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg transition-colors"
         >
           Contact Us
         </Link>
