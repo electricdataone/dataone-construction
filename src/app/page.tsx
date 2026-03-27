@@ -17,7 +17,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
 
         {/* Mobile: full-screen immersive hero */}
-        <div className="relative flex flex-col justify-end sm:hidden min-h-[100svh] px-5 pb-8 pt-20">
+        <div className="relative flex flex-col justify-center sm:hidden min-h-[100svh] px-5 pb-8 pt-20">
           <h1 className="text-4xl font-bold leading-[1.1] uppercase tracking-tight">
             Building the
             <br />
