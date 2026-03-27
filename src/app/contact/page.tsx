@@ -1,3 +1,5 @@
+import ContactForm from "../components/ContactForm";
+
 export default function Contact() {
   return (
     <>
@@ -27,78 +29,7 @@ export default function Contact() {
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 sm:mb-8">
               Send Us a Message
             </h2>
-            <form className="space-y-5 sm:space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-                <div>
-                  <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition text-sm sm:text-base"
-                    placeholder="John"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition text-sm sm:text-base"
-                    placeholder="Smith"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition text-sm sm:text-base"
-                  placeholder="john@company.com"
-                />
-              </div>
-              <div>
-                <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition text-sm sm:text-base"
-                  placeholder="Company name"
-                />
-              </div>
-              <div>
-                <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
-                  Inquiry Type
-                </label>
-                <select className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition text-gray-600 text-sm sm:text-base">
-                  <option>Project Inquiry</option>
-                  <option>Career / Employment</option>
-                  <option>Partnership / Subcontracting</option>
-                  <option>Investor Relations</option>
-                  <option>General Inquiry</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition resize-none text-sm sm:text-base"
-                  placeholder="Tell us about your project or inquiry..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 sm:py-4 rounded-lg transition-colors text-sm sm:text-base"
-              >
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Contact Info */}
