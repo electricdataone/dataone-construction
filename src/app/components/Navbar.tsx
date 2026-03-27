@@ -54,19 +54,11 @@ export default function Navbar() {
         {/* Center: Logo */}
         <Link href="/" className="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
           <Image
-            src="/images/emblem.png"
-            alt="DataOne Construction"
-            width={36}
-            height={36}
-            className="h-8 w-auto sm:hidden"
-            priority
-          />
-          <Image
-            src="/images/logo-horizontal.png"
+            src="/images/logo-horizontal-color.png"
             alt="DataOne Construction"
             width={200}
             height={45}
-            className="h-10 w-auto hidden sm:block"
+            className="h-8 w-auto sm:h-10"
             priority
           />
         </Link>
