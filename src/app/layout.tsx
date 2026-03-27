@@ -21,6 +21,28 @@ export const metadata: Metadata = {
   title: "DataOne Construction | Giga-Scale Data Center Electrical",
   description:
     "DataOne Construction — Powering the infrastructure behind the world's largest AI data centers. 50+ years of electrical construction excellence.",
+  openGraph: {
+    title: "DataOne Construction",
+    description:
+      "Powering the infrastructure behind the world's largest AI data centers. 50+ years of electrical construction excellence.",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DataOne Construction",
+      },
+    ],
+    type: "website",
+    siteName: "DataOne Construction",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DataOne Construction",
+    description:
+      "Powering the infrastructure behind the world's largest AI data centers. 50+ years of electrical construction excellence.",
+    images: ["/images/og-image.png"],
+  },
 };
 
 const navLinks = [
