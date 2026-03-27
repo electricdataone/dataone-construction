@@ -264,7 +264,8 @@ export default function Home() {
           </a>
           <p className="mt-6 text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             DataOne Construction is the electrical construction division of
-            DataOne, Europe&apos;s first giga-scale AI hosting data center platform.
+            DataOne, Europe&apos;s first giga-scale AI hosting data center
+            platform — proudly serving America and Europe.
           </p>
           <a
             href="https://dataone.eu"
