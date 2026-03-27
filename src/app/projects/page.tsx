@@ -35,11 +35,11 @@ export default function Projects() {
               </h2>
               <p className="mt-1 sm:mt-2 text-gray-600 text-sm sm:text-base">Vineland, New Jersey</p>
               <p className="mt-4 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base">
-                DataOne&apos;s landmark AI data center campus, built for Nebius
-                Group (formerly Yandex). DataOne Construction served as the
-                exclusive electrical contractor, delivering the complete
-                electrical scope for what will be one of the largest AI-ready
-                data centers in the United States.
+                DataOne&apos;s landmark AI data center campus in Vineland, New
+                Jersey. DataOne Construction served as the exclusive electrical
+                contractor, delivering the complete electrical scope for what
+                will be one of the largest AI-ready data centers in the United
+                States.
               </p>
               <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-4 sm:gap-6">
                 {[
@@ -102,7 +102,7 @@ export default function Projects() {
                 phase: "100 MW",
                 date: "End of 2025",
                 description:
-                  "First 100 MW of capacity installed and operational for Nebius AI workloads.",
+                  "First 100 MW of capacity installed and operational for AI workloads.",
                 status: "In Progress",
               },
               {
@@ -242,7 +242,7 @@ export default function Projects() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-brand font-bold">&#10003;</span>
-                  G42/Core42 AI infrastructure (AMD Instinct GPUs)
+                  AI infrastructure deployment
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-brand font-bold">&#10003;</span>

@@ -104,7 +104,7 @@ export default function Home() {
             <p className="mt-4 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base">
               DataOne Construction delivered the complete electrical scope for
               the landmark 300 MW AI data center in Vineland, New Jersey — a
-              2.6 million square foot campus built for Nebius Group.
+              2.6 million square foot campus.
             </p>
             <p className="mt-3 sm:mt-4 text-gray-600 leading-relaxed text-sm sm:text-base">
               Phase 1 was delivered in just 20 weeks. The facility supports power
@@ -153,7 +153,7 @@ export default function Home() {
                 name: "Vineland, NJ",
                 capacity: "300 MW",
                 image: "/images/vineland.png",
-                detail: "AI data center for Nebius Group",
+                detail: "350 MW IT load, green gas powered",
               },
               {
                 name: "Lyon, France",
@@ -165,7 +165,7 @@ export default function Home() {
                 name: "Grenoble, France",
                 capacity: "200 MW",
                 image: "/images/grenoble.png",
-                detail: "G42/Core42 AI infrastructure",
+                detail: "Tier-3 campus, hydroelectric powered",
               },
             ].map((site) => (
               <div
