@@ -243,6 +243,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Parent Company */}
+      <section className="bg-gray-950 py-14 sm:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <p className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest mb-6">
+            A division of
+          </p>
+          <a
+            href="https://dataone.eu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block hover:opacity-80 transition-opacity"
+          >
+            <Image
+              src="/images/dataone-eu-logo.png"
+              alt="DataOne — Sustainable Datacenter"
+              width={400}
+              height={90}
+              className="h-14 sm:h-20 w-auto mx-auto"
+            />
+          </a>
+          <p className="mt-6 text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+            DataOne Construction is the electrical construction division of
+            DataOne, Europe&apos;s first giga-scale AI hosting data center platform.
+          </p>
+          <a
+            href="https://dataone.eu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-6 text-brand hover:text-brand-light font-semibold text-sm transition-colors"
+          >
+            Visit dataone.eu &rarr;
+          </a>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-brand py-14 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
