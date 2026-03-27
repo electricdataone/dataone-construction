@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LeadershipCard from "../components/LeadershipCard";
 
 const leadership = [
   {
@@ -154,28 +155,13 @@ export default function About() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {leadership.map((person) => (
-              <div
+              <LeadershipCard
                 key={person.name}
-                className="bg-white rounded-xl border border-brand-muted/30 overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="relative aspect-[3/4] bg-gray-100">
-                  <Image
-                    src={person.image}
-                    alt={person.name}
-                    fill
-                    className={`object-cover ${person.portrait ? "object-center" : "object-[center_25%]"}`}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                </div>
-                <div className="p-3 sm:p-5">
-                  <h3 className="font-bold text-gray-900 text-xs sm:text-sm">
-                    {person.name}
-                  </h3>
-                  <p className="mt-1 sm:mt-2 text-gray-600 text-[10px] sm:text-xs leading-relaxed line-clamp-4 sm:line-clamp-none">
-                    {person.bio}
-                  </p>
-                </div>
-              </div>
+                name={person.name}
+                bio={person.bio}
+                image={person.image}
+                portrait={person.portrait}
+              />
             ))}
           </div>
         </div>
