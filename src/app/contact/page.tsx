@@ -167,14 +167,6 @@ export default function Contact() {
                 >
                   dataone.eu &rarr;
                 </a>
-                <a
-                  href="https://byersindustrial.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-brand hover:text-brand-light transition-colors font-medium text-sm sm:text-base"
-                >
-                  byersindustrial.com &rarr;
-                </a>
               </div>
             </div>
           </div>

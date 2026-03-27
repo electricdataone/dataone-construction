@@ -35,7 +35,7 @@ export default function Projects() {
               <p className="mt-1 sm:mt-2 text-gray-600 text-sm sm:text-base">Vineland, New Jersey</p>
               <p className="mt-4 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base">
                 DataOne&apos;s landmark AI data center campus, built for Nebius
-                Group (formerly Yandex). Byers Industrial Services served as the
+                Group (formerly Yandex). DataOne Construction served as the
                 exclusive electrical contractor, delivering the complete
                 electrical scope for what will be one of the largest AI-ready
                 data centers in the United States.
@@ -155,9 +155,9 @@ export default function Projects() {
           Backed by 3,000+ Projects
         </h2>
         <p className="text-gray-600 mb-8 sm:mb-12 max-w-2xl text-sm sm:text-base">
-          DataOne Construction draws on Byers Industrial Services&apos;
-          extensive portfolio across food &amp; beverage, manufacturing,
-          warehousing, renewables, and now — data center infrastructure.
+          DataOne Construction draws on an extensive portfolio across
+          food &amp; beverage, manufacturing, warehousing, renewables,
+          and now — data center infrastructure.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {[

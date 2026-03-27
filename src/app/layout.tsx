@@ -19,7 +19,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "DataOne Construction",
   description:
-    "DataOne Construction — Powering the infrastructure behind the world's largest AI data centers. A partnership between Data One and Byers Industrial Services.",
+    "DataOne Construction — Powering the infrastructure behind the world's largest AI data centers. 50+ years of electrical construction excellence.",
 };
 
 const navLinks = [
@@ -102,8 +102,7 @@ export default function RootLayout({
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed max-w-md">
                   Powering the infrastructure behind the world&apos;s largest AI
-                  data centers. A partnership between Data One and Byers
-                  Industrial Services.
+                  data centers. 50+ years of electrical construction excellence.
                 </p>
               </div>
               <div>

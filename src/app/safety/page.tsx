@@ -55,8 +55,8 @@ export default function Safety() {
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Safety Culture</h2>
             <p className="mt-4 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base">
-              DataOne Construction inherits Byers Industrial Services&apos;
-              deeply ingrained safety-first culture. Every employee — from first-day
+              DataOne Construction has a deeply ingrained safety-first
+              culture built over 50+ years. Every employee — from first-day
               apprentice to senior project manager — has stop-work authority.
               No schedule, no budget, no deadline overrides safety.
             </p>

@@ -16,7 +16,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 md:py-44">
           <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">
-            Data One + Byers Industrial Services
+            DataOne Construction
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-4xl text-balance">
             Building the Power Behind{" "}
@@ -74,10 +74,9 @@ export default function Home() {
               Vineland 300 MW AI Data Center
             </h2>
             <p className="mt-4 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base">
-              Byers Industrial Services served as the exclusive electrical
-              contractor on DataOne&apos;s landmark 300 MW AI data center in
-              Vineland, New Jersey — a 2.6 million square foot campus built for
-              Nebius Group.
+              DataOne Construction delivered the complete electrical scope for
+              the landmark 300 MW AI data center in Vineland, New Jersey — a
+              2.6 million square foot campus built for Nebius Group.
             </p>
             <p className="mt-3 sm:mt-4 text-gray-600 leading-relaxed text-sm sm:text-base">
               Phase 1 was delivered in just 20 weeks. The facility supports power
@@ -177,9 +176,8 @@ export default function Home() {
               Why DataOne Construction
             </h2>
             <p className="mt-3 sm:mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
-              We combine Data One&apos;s vision for giga-scale AI infrastructure
-              with Byers&apos; half-century of electrical construction
-              excellence.
+              Over 50 years of electrical construction excellence,
+              purpose-built for the giga-scale AI infrastructure era.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
