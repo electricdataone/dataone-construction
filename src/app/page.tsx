@@ -1,101 +1,170 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero */}
+      <section className="relative bg-gray-900 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-brand/20" />
+        <div className="relative max-w-7xl mx-auto px-6 py-32 md:py-44">
+          <p className="text-brand font-medium tracking-wider uppercase text-sm mb-4">
+            Data One + Byers Industrial Services
+          </p>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-4xl text-balance">
+            Building the Power Behind{" "}
+            <span className="text-brand">AI Infrastructure</span>
+          </h1>
+          <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+            DataOne Construction is the self-contained electrical and
+            construction division purpose-built to deliver giga-scale data
+            center infrastructure — on time, at scale, with certainty.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/capabilities"
+              className="bg-brand hover:bg-brand-light text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+            >
+              Our Capabilities
+            </Link>
+            <Link
+              href="/contact"
+              className="border border-white/30 hover:border-brand text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+            >
+              Get in Touch
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="bg-brand-cyan border-b border-brand-muted/30">
+        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { value: "300 MW", label: "Vineland Data Center" },
+            { value: "50+", label: "Years of Experience" },
+            { value: "1,200+", label: "Skilled Workforce" },
+            { value: "25", label: "States Licensed" },
+          ].map((stat) => (
+            <div key={stat.label}>
+              <p className="text-3xl md:text-4xl font-bold text-brand">
+                {stat.value}
+              </p>
+              <p className="text-sm text-gray-600 mt-1">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Vineland Showcase */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-brand font-medium tracking-wider uppercase text-sm mb-3">
+              Flagship Project
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Vineland 300 MW AI Data Center
+            </h2>
+            <p className="mt-6 text-gray-600 leading-relaxed">
+              Byers Industrial Services served as the exclusive electrical
+              contractor on DataOne&apos;s landmark 300 MW AI data center in
+              Vineland, New Jersey — a 2.6 million square foot campus built for
+              Nebius Group.
+            </p>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Phase 1 was delivered in just 20 weeks. The facility supports power
+              densities up to 500 KW per rack and is expandable to 1 GW — making
+              it one of the largest AI-ready data centers in the United States.
+            </p>
+            <Link
+              href="/projects"
+              className="inline-block mt-8 text-brand font-semibold hover:text-brand-light transition-colors"
+            >
+              View Project Details &rarr;
+            </Link>
+          </div>
+          <div className="bg-gradient-to-br from-brand-cyan to-brand-muted/40 rounded-2xl aspect-[4/3] flex items-center justify-center">
+            <div className="text-center px-8">
+              <p className="text-6xl font-bold text-brand">300 MW</p>
+              <p className="text-gray-600 mt-2">
+                Vineland, NJ &middot; 2.6M sq ft
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                Expandable to 1 GW
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why DataOne Construction */}
+      <section className="bg-gray-50 py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Why DataOne Construction
+            </h2>
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+              We combine Data One&apos;s vision for giga-scale AI infrastructure
+              with Byers&apos; half-century of electrical construction
+              excellence.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Giga-Scale Expertise",
+                description:
+                  "Purpose-built for the unique demands of AI data center construction — high voltage, extreme density, rapid deployment timelines.",
+              },
+              {
+                title: "Vertically Integrated",
+                description:
+                  "A self-contained electrical construction division eliminates coordination gaps between data center developer and contractor.",
+              },
+              {
+                title: "Proven Track Record",
+                description:
+                  "3,000+ projects, an EMR of 0.600, and the Vineland 300 MW campus as proof that we deliver at scale — safely and on time.",
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="bg-white p-8 rounded-xl border border-brand-muted/30 hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 rounded-lg bg-brand-cyan flex items-center justify-center mb-6">
+                  <div className="w-6 h-6 rounded bg-brand/20 border-2 border-brand" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">
+                  {card.title}
+                </h3>
+                <p className="mt-3 text-gray-600 leading-relaxed">
+                  {card.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-brand py-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Ready to Build at Scale?
+          </h2>
+          <p className="mt-4 text-white/80 text-lg">
+            Whether you&apos;re planning a new data center campus or scaling
+            existing infrastructure, DataOne Construction delivers certainty.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block mt-8 bg-white text-brand font-semibold px-8 py-4 rounded-lg hover:bg-brand-cyan transition-colors"
+          >
+            Contact Our Team
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

@@ -11,6 +11,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        brand: {
+          DEFAULT: "#40bcab",
+          light: "#5ab4a8",
+          cyan: "#e2fdfc",
+          muted: "#a1dbd4",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", "Arial", "Helvetica", "sans-serif"],
       },
     },
   },
