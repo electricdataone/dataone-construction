@@ -41,21 +41,13 @@ export default function Projects() {
                 will be one of the largest AI-ready data centers in the United
                 States.
               </p>
-              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-4 sm:gap-6">
-                {[
-                  { value: "300 MW", label: "Total Capacity" },
-                  { value: "2.6M ft\u00B2", label: "Campus Size" },
-                  { value: "20 Weeks", label: "Phase 1 Delivery" },
-                  { value: "1 GW", label: "Expandable To" },
-                ].map((stat) => (
-                  <div key={stat.label}>
-                    <p className="text-xl sm:text-2xl font-bold text-brand">
-                      {stat.value}
-                    </p>
-                    <p className="text-xs sm:text-sm text-gray-500">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
+              <ul className="mt-6 sm:mt-8 space-y-2 text-gray-600 text-sm sm:text-base">
+                <li>&#8226; 350 MW IT load</li>
+                <li>&#8226; 65,000 sqm over 44 ha of land</li>
+                <li>&#8226; Green gas powered</li>
+                <li>&#8226; Tier-3 compatible, ISO 27001, 14001, 50001</li>
+                <li>&#8226; Phase 1 delivered in 20 weeks</li>
+              </ul>
             </div>
             <div className="bg-gradient-to-br from-brand/10 to-brand-muted/30 p-6 sm:p-10 md:p-16 flex flex-col justify-center">
               <h3 className="font-bold text-gray-900 mb-4 sm:mb-6 text-sm sm:text-base">Scope of Work</h3>
