@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function GreenSpinningBadge() {
   return (
     <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64">
-      {/* Green background circle */}
-      <div className="absolute inset-[10%] rounded-full bg-brand-cyan border-2 border-gray-900/20" />
+      {/* Solid background circle */}
+      <div className="absolute inset-[10%] rounded-full bg-brand-cyan border-2 border-brand/30 shadow-lg" />
 
       {/* Rotating text circle */}
       <svg
@@ -25,15 +25,15 @@ export default function GreenSpinningBadge() {
           cy="100"
           r="75"
           fill="none"
-          stroke="rgba(0,0,0,0.1)"
-          strokeWidth="0.5"
+          stroke="rgba(64,188,171,0.3)"
+          strokeWidth="1"
         />
         {/* Rotating text */}
         <text
-          fill="rgba(0,0,0,0.7)"
-          fontSize="14.5"
-          fontWeight="500"
-          letterSpacing="8"
+          fill="#1a1a1a"
+          fontSize="14"
+          fontWeight="600"
+          letterSpacing="7"
         >
           <textPath href="#greenCirclePath" startOffset="0%">
             Powering AI and Sustainability
