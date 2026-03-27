@@ -152,26 +152,26 @@ export default function About() {
             Combining decades of data center development expertise with
             generations of electrical construction leadership.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {leadership.map((person) => (
               <div
                 key={person.name}
                 className="bg-white rounded-xl border border-brand-muted/30 overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="relative h-52 sm:h-60 bg-gray-100">
+                <div className="relative aspect-[3/4] bg-gray-100">
                   <Image
                     src={person.image}
                     alt={person.name}
                     fill
-                    className={`object-cover ${person.portrait ? "object-[center_20%]" : "object-top"}`}
+                    className={`object-cover ${person.portrait ? "object-center" : "object-[center_25%]"}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
-                <div className="p-5 sm:p-6">
-                  <h3 className="font-bold text-gray-900 text-sm sm:text-base">
+                <div className="p-3 sm:p-5">
+                  <h3 className="font-bold text-gray-900 text-xs sm:text-sm">
                     {person.name}
                   </h3>
-                  <p className="mt-2 text-gray-600 text-xs leading-relaxed">
+                  <p className="mt-1 sm:mt-2 text-gray-600 text-[10px] sm:text-xs leading-relaxed line-clamp-4 sm:line-clamp-none">
                     {person.bio}
                   </p>
                 </div>
