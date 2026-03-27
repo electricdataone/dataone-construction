@@ -56,28 +56,15 @@ export default function RootLayout({
             </div>
 
             {/* Center: Logo */}
-            <Link href="/" className="flex items-center gap-2 md:absolute md:left-1/2 md:-translate-x-1/2">
+            <Link href="/" className="md:absolute md:left-1/2 md:-translate-x-1/2">
               <Image
-                src="/images/logo-icon.png"
-                alt="DataOne"
-                width={32}
-                height={32}
-                className="h-7 sm:h-8 w-auto"
+                src="/images/logo-horizontal.png"
+                alt="DataOne Construction"
+                width={200}
+                height={45}
+                className="h-8 sm:h-10 w-auto brightness-0 invert"
                 priority
               />
-              <div className="hidden sm:block">
-                <Image
-                  src="/images/logo-full.png"
-                  alt="DataOne Construction"
-                  width={130}
-                  height={28}
-                  className="h-4 sm:h-[18px] w-auto brightness-0 invert"
-                  priority
-                />
-                <p className="text-[8px] tracking-[0.2em] text-gray-500 uppercase -mt-0.5">
-                  Construction
-                </p>
-              </div>
             </Link>
 
             {/* Right: Login + Menu dots */}
@@ -103,22 +90,13 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
               <div className="sm:col-span-2">
-                <div className="flex items-center gap-2 mb-4">
-                  <Image
-                    src="/images/logo-icon.png"
-                    alt="DataOne"
-                    width={32}
-                    height={32}
-                    className="h-7 w-auto"
-                  />
-                  <Image
-                    src="/images/logo-full.png"
-                    alt="DataOne Construction"
-                    width={120}
-                    height={28}
-                    className="h-4 w-auto brightness-0 invert"
-                  />
-                </div>
+                <Image
+                  src="/images/logo-horizontal.png"
+                  alt="DataOne Construction"
+                  width={200}
+                  height={45}
+                  className="h-8 sm:h-10 w-auto brightness-0 invert mb-4"
+                />
                 <p className="text-gray-400 text-sm leading-relaxed max-w-md">
                   Powering the infrastructure behind the world&apos;s largest AI
                   data centers. 50+ years of electrical construction excellence.

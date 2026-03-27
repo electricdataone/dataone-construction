@@ -44,21 +44,13 @@ export default function MobileNav() {
               <Link
                 href="/"
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-2"
               >
                 <Image
-                  src="/images/logo-icon.png"
-                  alt="DataOne"
-                  width={36}
-                  height={36}
-                  className="h-8 w-auto"
-                />
-                <Image
-                  src="/images/logo-full.png"
+                  src="/images/logo-horizontal.png"
                   alt="DataOne Construction"
-                  width={140}
-                  height={32}
-                  className="h-5 w-auto brightness-0 invert"
+                  width={180}
+                  height={40}
+                  className="h-9 w-auto brightness-0 invert"
                 />
               </Link>
               <button
