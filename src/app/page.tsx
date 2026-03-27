@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SpinningBadge from "./components/SpinningBadge";
 
 export default function Home() {
   return (
@@ -15,31 +16,39 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32">
-          <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">
-            DataOne Construction
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-4xl text-balance">
-            Building the Power Behind{" "}
-            <span className="text-brand">AI Infrastructure</span>
-          </h1>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
-            DataOne Construction is the self-contained electrical and
-            construction division purpose-built to deliver giga-scale data
-            center infrastructure — on time, at scale, with certainty.
-          </p>
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Link
-              href="/capabilities"
-              className="bg-brand hover:bg-brand-light text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg transition-colors text-center"
-            >
-              Our Capabilities
-            </Link>
-            <Link
-              href="/contact"
-              className="border border-white/30 hover:border-brand text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg transition-colors text-center"
-            >
-              Get in Touch
-            </Link>
+          <div className="flex items-center justify-between">
+            <div className="max-w-2xl">
+              <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">
+                DataOne Construction
+              </p>
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance">
+                Building the Power Behind{" "}
+                <span className="text-brand">AI Infrastructure</span>
+              </h1>
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+                DataOne Construction is the self-contained electrical and
+                construction division purpose-built to deliver giga-scale data
+                center infrastructure — on time, at scale, with certainty.
+              </p>
+              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Link
+                  href="/capabilities"
+                  className="bg-brand hover:bg-brand-light text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg transition-colors text-center"
+                >
+                  Our Capabilities
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border border-white/30 hover:border-brand text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg transition-colors text-center"
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
+            {/* Spinning badge — desktop only */}
+            <div className="hidden lg:block flex-shrink-0">
+              <SpinningBadge />
+            </div>
           </div>
         </div>
       </section>

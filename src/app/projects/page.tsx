@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Projects() {
@@ -27,7 +28,7 @@ export default function Projects() {
           <div className="grid md:grid-cols-2">
             <div className="p-6 sm:p-10 md:p-16">
               <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-2 sm:mb-3">
-                Flagship Project
+                American Flagship Project
               </p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
                 Vineland 300 MW AI Data Center
@@ -145,6 +146,114 @@ export default function Projects() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* European Projects */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3">
+          Europe
+        </p>
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          DataOne European Campuses
+        </h2>
+        <p className="text-gray-600 mb-8 sm:mb-12 max-w-2xl text-sm sm:text-base">
+          DataOne Construction supports the electrical infrastructure
+          build-out across Data One&apos;s European data center campuses —
+          two Tier-3 facilities powered by 100% renewable hydroelectric energy.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+          {/* Lyon */}
+          <div className="bg-white rounded-xl border border-brand-muted/30 overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="relative h-48 sm:h-56">
+              <Image
+                src="/images/lyon.png"
+                alt="Lyon Data Center"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-4 left-5">
+                <p className="text-white font-bold text-lg">Lyon, France</p>
+              </div>
+            </div>
+            <div className="p-6 sm:p-8">
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p className="text-xl font-bold text-brand">200 MW</p>
+                  <p className="text-xs text-gray-500">Target Capacity</p>
+                </div>
+                <div>
+                  <p className="text-xl font-bold text-brand">20,000 m&sup2;</p>
+                  <p className="text-xs text-gray-500">Campus Size</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-gray-600 text-xs sm:text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">&#10003;</span>
+                  Tier-3 compatible, 8-hectare campus
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">&#10003;</span>
+                  Multiple Tier-1 operators (Colt, Orange, SFR)
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">&#10003;</span>
+                  Hydroelectric &amp; nuclear powered
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">&#10003;</span>
+                  ISO 27001, ISO 14001, ISO 50001 certified
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Grenoble */}
+          <div className="bg-white rounded-xl border border-brand-muted/30 overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="relative h-48 sm:h-56">
+              <Image
+                src="/images/grenoble.png"
+                alt="Grenoble Data Center"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-4 left-5">
+                <p className="text-white font-bold text-lg">Grenoble, France</p>
+              </div>
+            </div>
+            <div className="p-6 sm:p-8">
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p className="text-xl font-bold text-brand">200 MW</p>
+                  <p className="text-xs text-gray-500">Target Capacity</p>
+                </div>
+                <div>
+                  <p className="text-xl font-bold text-brand">20,000+ m&sup2;</p>
+                  <p className="text-xs text-gray-500">Campus Size</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-gray-600 text-xs sm:text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">&#10003;</span>
+                  Tier-3 compatible, 7-hectare campus
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">&#10003;</span>
+                  G42/Core42 AI infrastructure (AMD Instinct GPUs)
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">&#10003;</span>
+                  Hydroelectric &amp; nuclear powered
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">&#10003;</span>
+                  ISO 27001, ISO 14001, ISO 50001 certified
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

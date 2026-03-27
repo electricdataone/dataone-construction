@@ -21,6 +21,9 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "Arial", "Helvetica", "sans-serif"],
       },
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+      },
     },
   },
   plugins: [],

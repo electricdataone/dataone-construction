@@ -53,13 +53,12 @@ export default function Navbar() {
 
         {/* Center: Logo */}
         <Link href="/" className="md:absolute md:left-1/2 md:-translate-x-1/2">
-          {/* White logo for dark nav (top) */}
           <Image
             src="/images/emblem.png"
             alt="DataOne Construction"
             width={36}
             height={36}
-            className={`h-8 w-auto sm:hidden ${scrolled ? "" : "brightness-0 invert"}`}
+            className="h-8 w-auto sm:hidden"
             priority
           />
           <Image
@@ -67,9 +66,7 @@ export default function Navbar() {
             alt="DataOne Construction"
             width={200}
             height={45}
-            className={`h-10 w-auto hidden sm:block transition-all duration-300 ${
-              scrolled ? "" : "brightness-0 invert"
-            }`}
+            className="h-10 w-auto hidden sm:block"
             priority
           />
         </Link>
