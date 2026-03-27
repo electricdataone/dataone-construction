@@ -81,7 +81,7 @@ export default function Projects() {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12">
             Project Timeline
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 phase: "Phase 1",
@@ -95,13 +95,20 @@ export default function Projects() {
                 date: "July 2026",
                 description:
                   "First 100 MW of capacity installed and operational for AI workloads.",
-                status: "In Progress",
+                status: "Completed",
               },
               {
                 phase: "300 MW",
                 date: "November 2026",
                 description:
                   "Full 300 MW campus completion. All electrical systems operational across 2.6M sq ft.",
+                status: "In Progress",
+              },
+              {
+                phase: "1 GW",
+                date: "Future",
+                description:
+                  "Campus expansion to 1 GW capacity. DataOne Construction positioned as the electrical partner for all phases.",
                 status: "Planned",
               },
             ].map((phase) => (
