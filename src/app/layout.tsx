@@ -24,11 +24,8 @@ export const metadata: Metadata = {
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/capabilities", label: "Capabilities" },
-  { href: "/projects", label: "Projects" },
-  { href: "/safety", label: "Safety" },
-  { href: "/careers", label: "Careers" },
+  { href: "/about", label: "About Us" },
+  { href: "/capabilities", label: "Solutions" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -40,39 +37,59 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} font-sans antialiased`}>
-        {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-brand-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/images/logo-icon.png"
-                alt="DataOne"
-                width={36}
-                height={36}
-                className="h-8 sm:h-9 w-auto"
-                priority
-              />
-              <Image
-                src="/images/logo-full.png"
-                alt="DataOne Construction"
-                width={140}
-                height={32}
-                className="h-5 sm:h-6 w-auto hidden sm:block"
-                priority
-              />
-            </Link>
+        {/* Navigation — dark bar matching dataone.eu */}
+        <nav className="sticky top-0 z-50 bg-gray-950 border-b border-gray-800">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+            {/* Left: Nav links (desktop) */}
             <div className="hidden md:flex items-center gap-6 lg:gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-gray-600 hover:text-brand transition-colors"
+                  className="text-sm font-medium text-gray-300 hover:text-brand transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
-            <MobileNav />
+
+            {/* Center: Logo */}
+            <Link href="/" className="flex items-center gap-2 md:absolute md:left-1/2 md:-translate-x-1/2">
+              <Image
+                src="/images/logo-icon.png"
+                alt="DataOne"
+                width={32}
+                height={32}
+                className="h-7 sm:h-8 w-auto"
+                priority
+              />
+              <div className="hidden sm:block">
+                <Image
+                  src="/images/logo-full.png"
+                  alt="DataOne Construction"
+                  width={130}
+                  height={28}
+                  className="h-4 sm:h-[18px] w-auto brightness-0 invert"
+                  priority
+                />
+                <p className="text-[8px] tracking-[0.2em] text-gray-500 uppercase -mt-0.5">
+                  Construction
+                </p>
+              </div>
+            </Link>
+
+            {/* Right: Login + Menu dots */}
+            <div className="flex items-center gap-3 sm:gap-4">
+              <Link
+                href="https://portal.dataone.eu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-block bg-brand hover:bg-brand-light text-white text-sm font-semibold px-5 py-2 rounded transition-colors"
+              >
+                Login
+              </Link>
+              <MobileNav />
+            </div>
           </div>
         </nav>
 
