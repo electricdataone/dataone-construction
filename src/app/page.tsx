@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SpinningBadge from "./components/SpinningBadge";
+import GreenSpinningBadge from "./components/GreenSpinningBadge";
 
 export default function Home() {
   return (
@@ -138,11 +139,14 @@ export default function Home() {
       {/* Facilities */}
       <section className="bg-gray-50 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+          <div className="flex flex-col items-center mb-10 sm:mb-16">
+            <div className="mb-6 sm:mb-8">
+              <GreenSpinningBadge />
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center">
               European Data Center Campuses
             </h2>
-            <p className="mt-3 sm:mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+            <p className="mt-3 sm:mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base text-center">
               DataOne Construction supports the build-out of data center campuses
               across Europe and America.
             </p>
@@ -260,7 +264,7 @@ export default function Home() {
             alt="ISO 27001, ISO 14001, ISO 50001, SOC 1, SOC 2, HDS Certifications"
             width={400}
             height={80}
-            className="h-16 sm:h-24 w-auto"
+            className="h-16 sm:h-24 w-auto transition-transform duration-300 hover:scale-110 cursor-pointer"
           />
         </div>
       </section>

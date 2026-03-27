@@ -33,7 +33,7 @@ export default function Navbar() {
           : "bg-gray-950 border-gray-800"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-5 sm:py-4 flex items-center justify-between">
         {/* Left: Nav links (large desktop only — hidden below 1024px to prevent logo overlap) */}
         <div className="hidden lg:flex items-center gap-5 xl:gap-7">
           {navLinks.map((link) => (
@@ -58,7 +58,7 @@ export default function Navbar() {
             alt="DataOne Construction"
             width={200}
             height={45}
-            className="h-8 w-auto sm:h-10"
+            className="h-10 w-auto sm:h-10"
             priority
           />
         </Link>
