@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 
@@ -36,34 +37,15 @@ export default function RootLayout({
         {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-brand-muted/30">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-8 h-8 relative">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20 4L4 20L20 36L36 20L20 4Z"
-                    stroke="#40bcab"
-                    strokeWidth="3"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                  <path
-                    d="M14 14L26 14L26 26L14 26Z"
-                    stroke="#40bcab"
-                    strokeWidth="2.5"
-                    strokeLinejoin="round"
-                    fill="none"
-                    transform="rotate(45 20 20)"
-                  />
-                </svg>
-              </div>
-              <div>
-                <span className="text-lg font-bold tracking-wide text-gray-900">
-                  DATAONE
-                </span>
-                <span className="block text-[10px] tracking-[0.3em] text-brand font-medium -mt-1">
-                  CONSTRUCTION
-                </span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.jpg"
+                alt="DataOne Construction"
+                width={160}
+                height={48}
+                className="h-10 w-auto"
+                priority
+              />
             </Link>
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
@@ -87,12 +69,13 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-6 py-16">
             <div className="grid md:grid-cols-4 gap-12">
               <div className="md:col-span-2">
-                <h3 className="text-xl font-bold tracking-wide mb-2">
-                  DATAONE{" "}
-                  <span className="text-brand text-sm tracking-[0.2em]">
-                    CONSTRUCTION
-                  </span>
-                </h3>
+                <Image
+                  src="/logo.jpg"
+                  alt="DataOne Construction"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto brightness-0 invert mb-4"
+                />
                 <p className="text-gray-400 text-sm leading-relaxed max-w-md">
                   Powering the infrastructure behind the world&apos;s largest AI
                   data centers. A partnership between Data One and Byers
