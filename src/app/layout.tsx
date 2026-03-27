@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "DataOne Construction",
+  title: "DataOne Construction | Giga-Scale Data Center Electrical",
   description:
     "DataOne Construction — Powering the infrastructure behind the world's largest AI data centers. 50+ years of electrical construction excellence.",
 };
