@@ -81,7 +81,7 @@ export default function RootLayout({
                   alt="DataOne Construction"
                   width={160}
                   height={48}
-                  className="h-8 sm:h-10 w-auto brightness-0 invert mb-4"
+                  className="h-8 sm:h-10 w-auto mb-4 rounded"
                 />
                 <p className="text-gray-400 text-sm leading-relaxed max-w-md">
                   Powering the infrastructure behind the world&apos;s largest AI
