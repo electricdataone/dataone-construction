@@ -28,12 +28,12 @@ export default function SpinningBadge() {
         {/* Rotating text */}
         <text
           fill="rgba(255,255,255,0.6)"
-          fontSize="11"
+          fontSize="12"
           fontWeight="500"
-          letterSpacing="5"
+          letterSpacing="2.5"
         >
           <textPath href="#circlePath" startOffset="0%">
-            Building a Greener Digital Future •
+            Building a Greener Digital Future • Powering AI •
           </textPath>
         </text>
       </svg>
