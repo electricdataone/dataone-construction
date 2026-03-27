@@ -5,11 +5,13 @@ const leadership = [
     name: "Charles-Antoine Beyney",
     bio: "Co-founder of BSO. Previously founded Etix Everywhere, sold to Vantage Data Centers. Serial data center entrepreneur driving giga-scale AI infrastructure.",
     image: "/images/charles-antoine.png",
+    portrait: true,
   },
   {
     name: "Michael Ourabah",
     bio: "Founded BSO at 21, grew it organically with zero PE investment into a global infrastructure company spanning 20+ years and 240+ connected markets.",
     image: "/images/michael-ourabah.png",
+    portrait: true,
   },
   {
     name: "Ryan Morris",
@@ -161,7 +163,7 @@ export default function About() {
                     src={person.image}
                     alt={person.name}
                     fill
-                    className="object-cover object-top"
+                    className={`object-cover ${person.portrait ? "object-[center_20%]" : "object-top"}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
