@@ -20,7 +20,7 @@ const leadership = [
   },
   {
     name: "Nick Wagner",
-    bio: "Joined the team in 2016 as a Journeyman Electrician, advancing to Site Foreman, Project Manager, VP of Business Development, and Chief Operating Officer. Also founded Fritz Staffing to enhance workforce capabilities. Dedicated to top-tier labor, continued growth, and operational excellence.",
+    bio: "Joined the team in 2016 as a Journeyman Electrician, advancing to Site Foreman, Project Manager, VP of Business Development, and Chief Operating Officer. Dedicated to top-tier labor, continued growth, and operational excellence.",
     image: "/images/nick-wagner.jpg",
   },
   {
@@ -35,7 +35,7 @@ const leadership = [
   },
   {
     name: "Wade Zane",
-    bio: "Built his career from project manager to Vice President of Project Management, overseeing national projects across America. With a strong foundation in industrial construction, Wade also founded Stable Works LLC in 2023.",
+    bio: "Built his career from project manager to Vice President of Project Management, overseeing national projects across America. Brings a strong foundation in industrial construction and nationwide project delivery.",
     image: "/images/wade-zane.jpg",
   },
   {
