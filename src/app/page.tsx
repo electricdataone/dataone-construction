@@ -238,7 +238,7 @@ export default function Home() {
             alt="ISO 27001, ISO 14001, ISO 50001, SOC 1, SOC 2, HDS Certifications"
             width={400}
             height={80}
-            className="h-12 sm:h-16 w-auto"
+            className="h-16 sm:h-24 w-auto"
           />
         </div>
       </section>
@@ -260,7 +260,7 @@ export default function Home() {
               alt="DataOne — Sustainable Datacenter"
               width={400}
               height={90}
-              className="h-14 sm:h-20 w-auto mx-auto"
+              className="h-20 sm:h-28 w-auto mx-auto"
             />
           </a>
           <p className="mt-6 text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
