@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -16,6 +16,15 @@ const navLinks = [
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 50);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
@@ -29,7 +38,9 @@ export default function MobileNav() {
           {[...Array(9)].map((_, i) => (
             <span
               key={i}
-              className="block w-[5px] h-[5px] rounded-full bg-white"
+              className={`block w-[5px] h-[5px] rounded-full transition-colors ${
+                scrolled ? "bg-gray-700" : "bg-white"
+              }`}
             />
           ))}
         </div>
