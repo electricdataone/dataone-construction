@@ -46,9 +46,8 @@ export default function Home() {
 
       {/* Stats Bar */}
       <section className="bg-brand-cyan border-b border-brand-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14 grid grid-cols-3 gap-4 sm:gap-8 text-center">
           {[
-            { value: "300 MW", label: "Vineland Data Center" },
             { value: "50+", label: "Years of Experience" },
             { value: "1,200+", label: "Skilled Workforce" },
             { value: "25", label: "States Licensed" },
