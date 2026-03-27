@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./components/MobileNav";
+import RecaptchaBadge from "./components/RecaptchaBadge";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -37,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} font-sans antialiased`}>
+        <RecaptchaBadge />
         {/* Navigation — dark bar matching dataone.eu */}
         <nav className="sticky top-0 z-50 bg-gray-950 border-b border-gray-800">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
