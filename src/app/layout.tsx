@@ -58,11 +58,19 @@ export default function RootLayout({
             {/* Center: Logo */}
             <Link href="/" className="md:absolute md:left-1/2 md:-translate-x-1/2">
               <Image
+                src="/images/emblem.png"
+                alt="DataOne Construction"
+                width={36}
+                height={36}
+                className="h-8 w-auto sm:hidden brightness-0 invert"
+                priority
+              />
+              <Image
                 src="/images/logo-horizontal.png"
                 alt="DataOne Construction"
                 width={200}
                 height={45}
-                className="h-8 sm:h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto hidden sm:block brightness-0 invert"
                 priority
               />
             </Link>
