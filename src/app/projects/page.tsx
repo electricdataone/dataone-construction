@@ -92,7 +92,7 @@ export default function Projects() {
               },
               {
                 phase: "100 MW",
-                date: "July 2026",
+                date: "April 2026",
                 description:
                   "First 100 MW of capacity installed and operational for AI workloads.",
                 status: "Completed",

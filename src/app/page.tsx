@@ -139,19 +139,20 @@ export default function Home() {
       {/* Facilities */}
       <section className="bg-gray-50 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col items-center mb-10 sm:mb-16">
-            <div className="mb-6 sm:mb-8">
-              <GreenSpinningBadge />
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               European Data Center Campuses
             </h2>
-            <p className="mt-3 sm:mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base text-center">
+            <p className="mt-3 sm:mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
               DataOne Construction supports the build-out of data center campuses
               across Europe and America.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+          <div className="relative grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            {/* Green badge centered between the two cards — desktop only */}
+            <div className="hidden sm:flex absolute inset-0 items-center justify-center z-10 pointer-events-none">
+              <GreenSpinningBadge />
+            </div>
             {[
               {
                 name: "Lyon, France",
