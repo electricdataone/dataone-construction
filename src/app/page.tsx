@@ -96,7 +96,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3">
-              Flagship Project
+              American Flagship Project
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               Vineland 300 MW AI Data Center
@@ -140,21 +140,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-              Global Data Center Footprint
+              European Data Center Campuses
             </h2>
             <p className="mt-3 sm:mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
               DataOne Construction supports the build-out of data center campuses
-              across three continents.
+              across Europe and America.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {[
-              {
-                name: "Vineland, NJ",
-                capacity: "300 MW",
-                image: "/images/vineland.png",
-                detail: "350 MW IT load, green gas powered",
-              },
               {
                 name: "Lyon, France",
                 capacity: "200 MW",
