@@ -43,13 +43,21 @@ export default function RootLayout({
         {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-brand-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo.jpg"
+                src="/images/logo-icon.png"
+                alt="DataOne"
+                width={36}
+                height={36}
+                className="h-8 sm:h-9 w-auto"
+                priority
+              />
+              <Image
+                src="/images/logo-full.png"
                 alt="DataOne Construction"
-                width={160}
-                height={48}
-                className="h-8 sm:h-10 w-auto"
+                width={140}
+                height={32}
+                className="h-5 sm:h-6 w-auto hidden sm:block"
                 priority
               />
             </Link>
@@ -76,13 +84,22 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
               <div className="sm:col-span-2">
-                <Image
-                  src="/logo.jpg"
-                  alt="DataOne Construction"
-                  width={160}
-                  height={48}
-                  className="h-8 sm:h-10 w-auto mb-4 rounded"
-                />
+                <div className="flex items-center gap-2 mb-4">
+                  <Image
+                    src="/images/logo-icon.png"
+                    alt="DataOne"
+                    width={32}
+                    height={32}
+                    className="h-7 w-auto"
+                  />
+                  <Image
+                    src="/images/logo-full.png"
+                    alt="DataOne Construction"
+                    width={120}
+                    height={28}
+                    className="h-4 w-auto brightness-0 invert"
+                  />
+                </div>
                 <p className="text-gray-400 text-sm leading-relaxed max-w-md">
                   Powering the infrastructure behind the world&apos;s largest AI
                   data centers. A partnership between Data One and Byers

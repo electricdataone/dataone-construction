@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -5,7 +6,14 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-brand/20" />
+        <Image
+          src="/images/datacenter-interior.jpg"
+          alt="Data center infrastructure"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 md:py-44">
           <p className="text-brand font-medium tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">
             Data One + Byers Industrial Services
@@ -83,22 +91,86 @@ export default function Home() {
               View Project Details &rarr;
             </Link>
           </div>
-          <div className="bg-gradient-to-br from-brand-cyan to-brand-muted/40 rounded-2xl aspect-[4/3] flex items-center justify-center">
-            <div className="text-center px-6 sm:px-8">
-              <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-brand">300 MW</p>
-              <p className="text-gray-600 mt-2 text-sm sm:text-base">
-                Vineland, NJ &middot; 2.6M sq ft
-              </p>
-              <p className="text-gray-500 text-xs sm:text-sm mt-1">
-                Expandable to 1 GW
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+            <Image
+              src="/images/vineland.png"
+              alt="Vineland 300 MW AI Data Center"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+              <p className="text-3xl sm:text-4xl font-bold text-white">300 MW</p>
+              <p className="text-white/80 text-sm">
+                Vineland, NJ &middot; 2.6M sq ft &middot; Expandable to 1 GW
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why DataOne Construction */}
+      {/* Facilities */}
       <section className="bg-gray-50 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+              Global Data Center Footprint
+            </h2>
+            <p className="mt-3 sm:mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+              DataOne Construction supports the build-out of data center campuses
+              across three continents.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                name: "Vineland, NJ",
+                capacity: "300 MW",
+                image: "/images/vineland.png",
+                detail: "AI data center for Nebius Group",
+              },
+              {
+                name: "Lyon, France",
+                capacity: "200 MW",
+                image: "/images/lyon.png",
+                detail: "Tier-3 campus, hydroelectric powered",
+              },
+              {
+                name: "Grenoble, France",
+                capacity: "200 MW",
+                image: "/images/grenoble.png",
+                detail: "G42/Core42 AI infrastructure",
+              },
+            ].map((site) => (
+              <div
+                key={site.name}
+                className="relative rounded-xl overflow-hidden aspect-square group"
+              >
+                <Image
+                  src={site.image}
+                  alt={site.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
+                  <p className="text-2xl sm:text-3xl font-bold text-white">
+                    {site.capacity}
+                  </p>
+                  <p className="text-white font-medium text-sm sm:text-base">
+                    {site.name}
+                  </p>
+                  <p className="text-white/70 text-xs sm:text-sm mt-1">
+                    {site.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why DataOne Construction */}
+      <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
@@ -116,34 +188,60 @@ export default function Home() {
                 title: "Giga-Scale Expertise",
                 description:
                   "Purpose-built for the unique demands of AI data center construction — high voltage, extreme density, rapid deployment timelines.",
+                image: "/images/high-density.png",
               },
               {
                 title: "Vertically Integrated",
                 description:
                   "A self-contained electrical construction division eliminates coordination gaps between data center developer and contractor.",
+                image: "/images/service-construct.png",
               },
               {
                 title: "Proven Track Record",
                 description:
                   "3,000+ projects, an EMR of 0.600, and the Vineland 300 MW campus as proof that we deliver at scale — safely and on time.",
+                image: "/images/service-manage.png",
               },
             ].map((card) => (
               <div
                 key={card.title}
-                className="bg-white p-6 sm:p-8 rounded-xl border border-brand-muted/30 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl border border-brand-muted/30 overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-lg bg-brand-cyan flex items-center justify-center mb-4 sm:mb-6">
-                  <div className="w-5 sm:w-6 h-5 sm:h-6 rounded bg-brand/20 border-2 border-brand" />
+                <div className="relative h-48 sm:h-52">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">
-                  {card.title}
-                </h3>
-                <p className="mt-2 sm:mt-3 text-gray-600 leading-relaxed text-sm sm:text-base">
-                  {card.description}
-                </p>
+                <div className="p-6 sm:p-8">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+                    {card.title}
+                  </h3>
+                  <p className="mt-2 sm:mt-3 text-gray-600 leading-relaxed text-sm sm:text-base">
+                    {card.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Certifications Bar */}
+      <section className="border-y border-gray-200 py-10 sm:py-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+            Certified &amp; Compliant
+          </p>
+          <Image
+            src="/images/certs-badge.png"
+            alt="ISO 27001, ISO 14001, ISO 50001, SOC 1, SOC 2, HDS Certifications"
+            width={400}
+            height={80}
+            className="h-12 sm:h-16 w-auto"
+          />
         </div>
       </section>
 
