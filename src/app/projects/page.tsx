@@ -149,29 +149,30 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Additional Experience */}
+      {/* Depth of Experience */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
           Backed by 3,000+ Projects
         </h2>
         <p className="text-gray-600 mb-8 sm:mb-12 max-w-2xl text-sm sm:text-base">
-          DataOne Construction draws on an extensive portfolio across
-          food &amp; beverage, manufacturing, warehousing, renewables,
-          and now — data center infrastructure.
+          DataOne Construction brings decades of complex electrical
+          construction experience to every project — from high-voltage
+          switchgear and industrial automation to mission-critical power
+          distribution systems.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {[
-            { count: "26+", sector: "Food & Beverage" },
-            { count: "17+", sector: "Industrial Manufacturing" },
-            { count: "6+", sector: "Warehouse & Distribution" },
-            { count: "1", sector: "Giga-Scale Data Center" },
+            { count: "3,000+", label: "Projects Delivered" },
+            { count: "50+", label: "Years of Expertise" },
+            { count: "1,200+", label: "Skilled Electricians" },
+            { count: "25", label: "States Licensed" },
           ].map((item) => (
             <div
-              key={item.sector}
+              key={item.label}
               className="text-center p-4 sm:p-6 rounded-xl bg-brand-cyan"
             >
               <p className="text-2xl sm:text-3xl font-bold text-brand">{item.count}</p>
-              <p className="text-xs sm:text-sm text-gray-600 mt-1">{item.sector}</p>
+              <p className="text-xs sm:text-sm text-gray-600 mt-1">{item.label}</p>
             </div>
           ))}
         </div>
