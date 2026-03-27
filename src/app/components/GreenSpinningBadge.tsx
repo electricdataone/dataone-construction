@@ -48,7 +48,7 @@ export default function GreenSpinningBadge() {
           alt="DataOne"
           width={60}
           height={60}
-          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 brightness-0"
         />
       </div>
     </div>
