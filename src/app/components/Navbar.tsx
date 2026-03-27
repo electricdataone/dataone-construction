@@ -34,13 +34,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-        {/* Left: Nav links (desktop) */}
-        <div className="hidden md:flex items-center gap-5 lg:gap-7">
+        {/* Left: Nav links (large desktop only — hidden below 1024px to prevent logo overlap) */}
+        <div className="hidden lg:flex items-center gap-5 xl:gap-7">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-medium whitespace-nowrap transition-colors ${
                 scrolled
                   ? "text-gray-600 hover:text-brand"
                   : "text-gray-300 hover:text-brand"
@@ -52,7 +52,7 @@ export default function Navbar() {
         </div>
 
         {/* Center: Logo */}
-        <Link href="/" className="md:absolute md:left-1/2 md:-translate-x-1/2">
+        <Link href="/" className="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
           <Image
             src="/images/emblem.png"
             alt="DataOne Construction"
