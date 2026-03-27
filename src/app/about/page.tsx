@@ -3,50 +3,42 @@ import Image from "next/image";
 const leadership = [
   {
     name: "Charles-Antoine Beyney",
-    title: "CEO, DataOne",
     bio: "Co-founder of BSO. Previously founded Etix Everywhere, sold to Vantage Data Centers. Serial data center entrepreneur driving giga-scale AI infrastructure.",
     image: "/images/charles-antoine.png",
   },
   {
     name: "Michael Ourabah",
-    title: "Co-Founder, DataOne & CEO, BSO",
     bio: "Founded BSO at 21, grew it organically with zero PE investment into a global infrastructure company spanning 20+ years and 240+ connected markets.",
     image: "/images/michael-ourabah.png",
   },
   {
     name: "Ryan Morris",
-    title: "Owner, Byers Industrial Services & Founder, Triumph Atlantic",
-    bio: "Began his career as an electrician with Byers nearly 15 years ago, rising through the ranks to become its owner in 2024. Founded Triumph Atlantic to foster long-term partnerships with organizations that share its values and strategic vision. His leadership is defined by a hands-on approach, dedication to integrity, and a focus on creating meaningful, lasting relationships.",
+    bio: "Began his career as an electrician with Byers nearly 15 years ago, rising through the ranks to become its owner in 2024. His leadership is defined by a hands-on approach, dedication to integrity, and a focus on creating meaningful, lasting relationships.",
     image: "/images/ryan-morris.jpg",
   },
   {
     name: "Nick Wagner",
-    title: "COO, Triumph Atlantic & COO, Byers Industrial Services",
-    bio: "Joined Byers in 2016 as a Journeyman Electrician, advancing to Site Foreman, Project Manager, VP of Business Development, and Chief Operating Officer. Also founded Fritz Staffing to enhance workforce capabilities across the Triumph Atlantic portfolio. Dedicated to top-tier labor, continued growth, and operational excellence.",
+    bio: "Joined Byers in 2016 as a Journeyman Electrician, advancing to Site Foreman, Project Manager, VP of Business Development, and Chief Operating Officer. Also founded Fritz Staffing to enhance workforce capabilities. Dedicated to top-tier labor, continued growth, and operational excellence.",
     image: "/images/nick-wagner.jpg",
   },
   {
     name: "Danielle Dyjak",
-    title: "COO, Byers Industrial Services",
     bio: "Overseeing operations across all Byers divisions — electrical, mechanical, structural, and renewables.",
     image: "/images/danielle-dyjak.jpg",
   },
   {
     name: "Justin Wood",
-    title: "SVP Project Management, Byers Industrial & Principal, Triumph Atlantic",
-    bio: "Joined Byers in 2018 as Head of Procurement, expanded into Business Development in 2019, and stepped into SVP of Project Management in 2025. Oversees all Byers projects and contributes expertise to support growth across the Triumph Atlantic portfolio.",
+    bio: "Joined Byers in 2018 as Head of Procurement, expanded into Business Development in 2019, and stepped into SVP of Project Management in 2025. Oversees all Byers projects and ensures the company's continued success.",
     image: "/images/justin-wood.jpg",
   },
   {
     name: "Wade Zane",
-    title: "Former VP Project Management, Byers Industrial",
     bio: "Built his career at Byers from project manager to Vice President of Project Management, overseeing national projects across America. With a strong foundation in industrial construction, Wade also founded Stable Works LLC in 2023.",
     image: "/images/wade-zane.jpg",
   },
   {
     name: "Steve Carpenter",
-    title: "Head of Estimating, Byers Industrial & Principal, Triumph Atlantic",
-    bio: "Began at Byers in 1989, progressing through purchasing, estimating, and project management. Now leads the estimating team supporting Byers' nationwide growth. His ability to develop and maintain personal relationships has been instrumental in helping all Triumph Atlantic companies thrive.",
+    bio: "Began at Byers in 1989, progressing through purchasing, estimating, and project management. Now leads the estimating team supporting Byers' nationwide growth. His ability to develop and maintain personal relationships has been instrumental in the company's success.",
     image: "/images/steve-carpenter.jpg",
   },
 ];
@@ -177,9 +169,6 @@ export default function About() {
                   <h3 className="font-bold text-gray-900 text-sm sm:text-base">
                     {person.name}
                   </h3>
-                  <p className="text-brand text-xs sm:text-sm font-medium mt-0.5">
-                    {person.title}
-                  </p>
                   <p className="mt-2 text-gray-600 text-xs leading-relaxed">
                     {person.bio}
                   </p>
