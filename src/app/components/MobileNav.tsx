@@ -165,10 +165,10 @@ export default function MobileNav() {
                       <path d="M22 4L12 13 2 4" />
                     </svg>
                     <a
-                      href="mailto:hello@dataone.eu"
+                      href="mailto:support@dataone.eu"
                       className="text-gray-400 hover:text-white text-sm transition-colors"
                     >
-                      hello@dataone.eu
+                      support@dataone.eu
                     </a>
                   </div>
                 </div>
